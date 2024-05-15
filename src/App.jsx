@@ -17,20 +17,19 @@ function App() {
 
 
 < Header tasks={tasks} />
-<div><h1  onClick={clearAll} className="capitalize text-white text-2xl font-[400]  text-center mt-4" >remove all the user </h1></div>
+<div><h1  onClick={clearAll} className="text-white text-2xl font-[400]  text-center mt-4" >Clear tasks</h1></div>
 
-   <div className='w-[100%] flex items-center justify-between mt-[2vw] '>
-
-<div className='w-[50%] flex justify-between items-center flex-colgap-[2vw]  ' >
+   <div className='w-screen flex items-center justify-center mt-[2vw]'>
+   <div className='w-[30vw] h-fit rounded border border-white'>
+<div className='flex justify-between items-center flex-col ' >
 < Create tasks={tasks} settasks={settasks}  />
-
-    </div>
-<div className='w-[50%]   ' >
 < Show  tasks={tasks}  settasks={settasks}   />
 
-</div>
-</div>
+    </div>
 
+
+</div>
+</div>
 
     </>
   )
