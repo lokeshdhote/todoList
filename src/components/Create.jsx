@@ -5,13 +5,20 @@ import { useState } from 'react'
 
 const Create = ({tasks,settasks })=>{
   const [title,settitle] = useState("")
+
+  console.log(title);
+  
   const submitform = (e)=>{
     e.preventDefault();
-    const newtodo = {id:nanoid(),title,completed:false}
-    settasks([...tasks, newtodo]);
-    settitle("")
- 
-    localStorage.setItem("tasks",JSON.stringify([...tasks, newtodo]));
+
+    if(title  !== ""){
+      const newtodo = {id:nanoid(),title,completed:false}
+          settasks([...tasks, newtodo]);
+          settitle("")
+          localStorage.setItem("tasks",JSON.stringify([...tasks, newtodo]));
+      
+          }
+   
   }
 
     return(
